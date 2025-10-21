@@ -1,5 +1,6 @@
 Feature: ordering 2 products
-@test1
+
+  @test1 @smoke @cart
   Scenario: Ordering 2 products by adding into cart
     Given User navigate to url
     When user enters Username and Password
@@ -14,6 +15,7 @@ Feature: ordering 2 products
     And Click on finish button
     And Verify the thank you message
 
+  @test2 @cart @remove
   Scenario: validate remove button in cart page
     Given User navigate to url
     When user enters Username and Password
@@ -22,7 +24,8 @@ Feature: ordering 2 products
     And Click on cart button
     And click on remove button and continue shopping button
 
-  Scenario:
+  @test3 @cart @validation
+  Scenario: validate error messages in checkout
     Given User navigate to url
     When user enters Username and Password
     Then Click on login button
